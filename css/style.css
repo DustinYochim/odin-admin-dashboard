@@ -1,0 +1,31 @@
+body {
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: "sidebar header" "sidebar main";
+}
+
+header {
+  grid-area: header;
+}
+
+.sidebar {
+  padding: 20px;
+  grid-area: sidebar;
+
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+main .main-content {
+  grid-area: main;
+}
+
+header img.search-icon,
+header img.notifications-icon,
+header img.account-circle-icon,
+.sidebar img.page-icon {
+  height: 30px;
+}
