@@ -11,53 +11,49 @@
   <body>
     <header>
       <div class="header-top">
-        <label for="search"
-          ><img class="search-icon" src="./img/search.svg" alt="Search Icon"
-        /></label>
-        <input type="search" />
-        <img
-          class="notifications-icon"
-          src="./img/notification.svg"
-          alt="Notifications
-        "
-        />
-        <img
-          class="account-circle-icon"
-          src="./img/account-circle.svg"
-          alt="account-circle"
-        />
+        <div class="search">
+          <label for="search"
+            ><img class="icon" src="./img/search.svg" alt="search " /></label
+          ><input type="search" />
+        </div>
+        <div class="notifications">
+          <img class="icon" src="./img/notification.svg" alt="Notifications" />
+        </div>
+        <div class="user-icon">
+          <img class="user-icon" src="./img/user-icon.png" alt="User Icon" />
+        </div>
         <div class="user-name">Dustin Yochim</div>
       </div>
-
       <div class="header-bottom">
-        <img
-          class="account-circle-icon"
-          src="./img/account-circle.svg"
-          alt="account-circle"
-        />
-        <div class="welcome-message">
-          <p>Hi there,</p>
-          <p>Dustin Yochim (@dyochim)</p>
+        <div class="welcome">
+          <div class="user-icon">
+            <img class="user-icon" src="./img/user-icon.png" alt="User Icon" />
+          </div>
+          <div class="welcome-message">
+            <p>Hi there,</p>
+            <p>Dustin Yochim (@dustinyochim)</p>
+          </div>
         </div>
-        <button>New</button><button>Upload</button><button>Share</button>
+        <div class="buttons">
+          <button>New</button><button>Upload</button><button>Share</button>
+        </div>
       </div>
     </header>
-
-    <div class="sidebar">
-      <div class="page-title">
-        <img
-          class="page-icon"
-          src="./img/view-dashboard-outline.svg"
-          alt="Dashboard Icon"
-        />
-        <a href="">Dashboard</a>
-      </div>
-      <a href="">Home</a><a href="">Profile</a><a href="">Messages</a
-      ><a href="">History</a><a href="">Tasks</a><a href="">Communities</a
-      ><a href="">Settings</a><a href="">Support</a><a href="">Privacy</a>
-    </div>
-
-    <main class="main-content">
+    <nav>
+      <ul>
+        <li>Dashboard</li>
+        <li>Home</li>
+        <li>Profile</li>
+        <li>Messages</li>
+        <li>History</li>
+        <li>Tasks</li>
+        <li>Communities</li>
+        <li>Settings</li>
+        <li>Support</li>
+        <li>Privacy</li>
+      </ul>
+    </nav>
+    <main>
       <div class="projects">
         <h3>Your Projects</h3>
         <div class="project">Super Cool Project</div>
@@ -68,11 +64,13 @@
         <div class="project">Money Maker</div>
       </div>
       <div class="announcements">
+        <h3>Announcements</h3>
         <div class="announcement">Site Maintenance</div>
         <div class="announcement">Community Share Day</div>
         <div class="announcement">Updated Privacy Policy</div>
       </div>
       <div class="trending">
+        <h3>Trending</h3>
         <div class="trending-user">@tegan</div>
         <div class="trending-user">@morgan</div>
         <div class="trending-user">@kendall</div>
