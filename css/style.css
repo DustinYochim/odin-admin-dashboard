@@ -1,21 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 body > * {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 body {
   height: 100vh;
 
   display: grid;
-  grid-template: 0.7fr 4fr / 1fr 4fr;
+  grid-template: 0.7fr 4fr / 1.3fr 4fr;
   grid-template-areas: "nav header" "nav main";
 }
 
+/* HEADER STYLES */
 header {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-area: header;
 
-  background-color: #f8fafc;
+  background-color: rgb(232, 232, 232);
   padding-left: 40px;
   padding-right: 50px;
 
@@ -38,7 +42,7 @@ header .header-top {
 input[type="search"] {
   flex: 1;
   margin-left: 12px;
-  background-color: #cbd5e1;
+  background-color: rgb(247, 248, 252);
   border: 1px solid grey;
   border-radius: 15px;
   padding: 5px;
@@ -84,22 +88,90 @@ header .header-bottom {
 }
 
 .header-bottom .buttons > button {
-  background-color: #cbd5e1;
+  background-color: rgb(54, 55, 63);
+  color: white;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 5px 20px;
-  border: 2px solid black;
+  border: none;
   border-radius: 20px;
-  color: black;
   cursor: pointer;
 }
+
+/* SIDEBAR STYLES */
 nav {
   grid-area: nav;
-  background-color: #475569;
+  background-color: rgb(54, 55, 63);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 2px black;
 }
 
+nav ul > li > a {
+  text-decoration: none;
+  color: #a4a6b3;
+  font-weight: 600;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+nav ul > li > a > img {
+  height: 25px;
+}
+
+nav ul:nth-child(1) > li:nth-child(1) a > img {
+  height: 35px;
+}
+
+nav ul:nth-child(1) {
+  flex: 1;
+}
+
+nav ul:nth-child(2) {
+  margin-top: auto;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+nav ul:nth-child(1) li:nth-child(1) a {
+  font-size: 1.5rem;
+  color: white;
+}
+
+nav ul > li {
+  padding: 10px;
+}
+nav ul > li:hover {
+  background-color: rgb(232, 232, 232);
+  border-left: 10px solid black;
+  border-radius: 3px;
+}
+
+nav ul > li:hover a {
+  color: black;
+}
+.dashboard {
+  margin-bottom: 50px;
+}
+
+nav ul:nth-child(1) li:nth-child(1) a:hover {
+  color: black;
+}
+
+.sidebar {
+  color: #a4a6b3;
+}
+
+/* MAIN STYLES */
 main {
   grid-area: main;
-  background-color: #cbd5e1;
+  background-color: rgb(247, 248, 252);
+  padding: 20px;
   z-index: -1;
 }
