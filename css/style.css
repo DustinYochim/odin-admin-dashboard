@@ -17,7 +17,7 @@ body > * {
 }
 body {
   display: grid;
-  grid-template: 0.7fr 4fr / 1.3fr 4fr;
+  grid-template: 0.7fr 4fr / 1.1fr 4fr;
   grid-template-areas: "sidebar header" "sidebar main";
   height: 100vh;
 }
@@ -150,11 +150,13 @@ li.dashboard > a {
   background-color: var(--main-bg-color);
   z-index: -1;
   padding: 20px;
+  padding-top: 30px;
   padding-bottom: 50px;
 
   display: grid;
   grid-template-columns: 2.5fr 1fr;
   grid-template-rows: 1fr 1fr;
+  gap: 15px;
   grid-template-areas: "projects announcements" "projects trending";
 }
 
@@ -164,6 +166,46 @@ li.dashboard > a {
 }
 .projects {
   grid-area: projects;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid red; */
+}
+
+.project-container {
+  margin-top: 10px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  flex: 1;
+  /* border: 1px solid blue; */
+}
+
+.project {
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  border-left: 8px solid rgb(231, 182, 74);
+  box-shadow: 1px 1px 2px black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-weight: 600;
+}
+
+.project-description {
+  margin-top: 5px;
+  margin-right: 20px;
+  color: grey;
+  flex: 1;
+}
+.project-buttons {
+  display: flex;
+  gap: 15px;
+  align-self: end;
 }
 
 .announcements {
@@ -180,6 +222,7 @@ li.dashboard > a {
   flex-direction: column;
   /* flex: 1; */
   padding: 20px;
+  box-shadow: 1px 1px 2px black;
 }
 
 .announcement {
@@ -202,7 +245,6 @@ li.dashboard > a {
   grid-area: trending;
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
 }
 
 .trending-container {
@@ -213,6 +255,7 @@ li.dashboard > a {
   flex-direction: column;
   flex: 1;
   justify-content: center;
+  box-shadow: 1px 1px 2px black;
 }
 
 .trending-container > * {
