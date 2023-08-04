@@ -31,11 +31,3 @@ cd admin-dashboard-css-grid
 ## Usage
 
 Feel free to use this template for your own projects. You can modify the HTML and CSS files to customize the design and layout to your liking.
-
-## Credits
-
-This Admin Dashboard template was created by Dustin Yochim.
-
-## License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute this template as you see fit.
